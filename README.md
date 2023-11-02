@@ -20,16 +20,16 @@ Ensure the data is clean by eliminating rows with null values (you can do this b
 
 #### *Date Table*
 To create a date table, I used the following DAX expression:
-    Date = 
-    ADDCOLUMNS (
-        CALENDAR (
-            MIN(Orders[Order Date]),
-            MAX(Orders[Shipping Date])
-        ),
-        "Year", YEAR([Date]),
-        "Month", MONTH([Date]),
-        "Day", DAY([Date])
-    )
+    Date = \
+    ADDCOLUMNS (\
+        CALENDAR (\
+            MIN(Orders[Order Date]),\
+            MAX(Orders[Shipping Date])\
+        ),\
+        "Year", YEAR([Date]),\
+        "Month", MONTH([Date]),\
+        "Day", DAY([Date])\
+    )\
 *You need to right click on the date table and select 'Mark as date table'*
 
 I then used formulae like the following, to create StartofMonth/Quarter/Year columns by clicking on "New Column" whilst selecting my date table on the data tab (to ensure your new columns land in your date table):
@@ -56,20 +56,20 @@ After adding a new measure to the table you can delete the existing column when 
 Now, ensure you have clicked on the measure table before you create any new measures - which ensures your new measure is stored in your measures table.
 
 #### *Create key measures*
-I created key measures to prepare for analysis, using DAX expressions.
-TotalOrders = COUNT(Orders[Product Code])
-TotalProfit = SUMX(Orders, (RELATED(Products[Sale Price]) - RELATED(Products[Cost Price])) * Orders[Product Quantity])
-TotalQuantity = SUM(Orders[Product Quantity])
-TotalCustomers = DISTINCTCOUNT(Orders[User ID])
-Total Revenue = SUMX(Orders, Orders[Product Quantity] * RELATED(Products[Sale Price]))
-RevenueYTD = CALCULATE(
-    [Total Revenue],
-    DATESYTD('Date'[Date])
-    )
-ProfitYTD = CALCULATE(
-    [TotalProfit],
-    DATESYTD('Date'[Date])
-)
+I created key measures to prepare for analysis, using DAX expressions.\
+TotalOrders = COUNT(Orders[Product Code])\
+TotalProfit = SUMX(Orders, (RELATED(Products[Sale Price]) - RELATED(Products[Cost Price])) * Orders[Product Quantity])\
+TotalQuantity = SUM(Orders[Product Quantity])\
+TotalCustomers = DISTINCTCOUNT(Orders[User ID])\
+Total Revenue = SUMX(Orders, Orders[Product Quantity] * RELATED(Products[Sale Price]))\
+RevenueYTD = CALCULATE(\
+    [Total Revenue],\
+    DATESYTD('Date'[Date])\
+    )\
+ProfitYTD = CALCULATE(\
+    [TotalProfit],\
+    DATESYTD('Date'[Date])\
+)\
 
 **Screenshot of Measures Table**
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/596c86e7-a31c-43ee-b04f-4a6b2d5d71ea)
