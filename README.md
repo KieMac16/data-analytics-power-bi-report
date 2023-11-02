@@ -56,17 +56,17 @@ After adding a new measure to the table you can delete the existing column when 
 Now, ensure you have clicked on the measure table before you create any new measures - which ensures your new measure is stored in your measures table.
 
 #### *Create key measures*
-I created key measures to prepare for analysis, using DAX expressions.\
-TotalOrders = COUNT(Orders[Product Code])\
-TotalProfit = SUMX(Orders, (RELATED(Products[Sale Price]) - RELATED(Products[Cost Price])) * Orders[Product Quantity])\
-TotalQuantity = SUM(Orders[Product Quantity])\
-TotalCustomers = DISTINCTCOUNT(Orders[User ID])\
-Total Revenue = SUMX(Orders, Orders[Product Quantity] * RELATED(Products[Sale Price]))\
-RevenueYTD = CALCULATE(\
+I created key measures to prepare for analysis, using DAX expressions:\
+- TotalOrders = COUNT(Orders[Product Code])
+- TotalProfit = SUMX(Orders, (RELATED(Products[Sale Price]) - RELATED(Products[Cost Price])) * Orders[Product Quantity])
+- TotalQuantity = SUM(Orders[Product Quantity])
+- TotalCustomers = DISTINCTCOUNT(Orders[User ID])
+- Total Revenue = SUMX(Orders, Orders[Product Quantity] * RELATED(Products[Sale Price]))
+- RevenueYTD = CALCULATE(\
     [Total Revenue],\
     DATESYTD('Date'[Date])\
-    )\
-ProfitYTD = CALCULATE(\
+    )
+- ProfitYTD = CALCULATE(\
     [TotalProfit],\
     DATESYTD('Date'[Date])\
 )\
