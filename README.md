@@ -19,7 +19,7 @@ Ensure the data is clean by eliminating rows with null values (you can do this b
 ## Creating the data model
 
 ### *Date Table*
-To create a date table, I used the following DAX expression when creating a new table in Power Query Editor:\
+- To create a date table, I used the following DAX expression when creating a new table in Power Query Editor:\
     Date = \
     ADDCOLUMNS (\
         CALENDAR (\
@@ -33,15 +33,15 @@ To create a date table, I used the following DAX expression when creating a new 
     
 *You need to right click on the date table and select 'Mark as date table'*
 
-I then used formulae like the following, to create StartofMonth/Quarter/Year columns by clicking on "New Column" whilst selecting my date table on the data tab (to ensure your new columns land in your date table):
+- I then used formulae like the following, to create StartofMonth/Quarter/Year columns by clicking on "New Column" whilst selecting my date table on the data tab (to ensure your new columns land in your date table):
 
 StartofMonth = MONTH('Date'[Date])
 
-I also looked at using the SWITCH function to ensure I could have worded Months etc:
+- I also looked at using the SWITCH function to ensure I could have worded Months etc:
 
 StartofMonthName = SWITCH('Date'[StartofMonth], 1, "Jan", 2, "Feb", 3, "Mar", 4, "Apr", 5, "May", 6, "Jun", 7, "Jul", 8, "Aug", 9, "Sep", 10, "Oct", 11, "Nov", 12, "Dec")
 
-And finally I created a Date Hierarcy to allow me to drill down into data by date types - This is as simple as right clikcing on your first date type and selecting 'Create Hierarchy'. Then, in order, right click on the next date type and click 'Add to hierarchy', selecting your date hierarchy.
+- And finally I created a Date Hierarcy to allow me to drill down into data by date types - This is as simple as right clikcing on your first date type and selecting 'Create Hierarchy'. Then, in order, right click on the next date type and click 'Add to hierarchy', selecting your date hierarchy.
 
 *Screenshot of Date Hierarchy*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/2fa66ce6-b745-475b-a0c4-476df7560330)
