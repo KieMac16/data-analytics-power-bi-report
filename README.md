@@ -19,7 +19,8 @@ Ensure the data is clean by eliminating rows with null values (you can do this b
 ## Creating the data model
 
 ### *Date Table*
-- To create a date table, I used the following DAX expression when creating a new table in Power Query Editor:\
+- To create a date table, I used the following DAX expression when creating a new table in Power Query Editor:
+  
     Date = \
     ADDCOLUMNS (\
         CALENDAR (\
