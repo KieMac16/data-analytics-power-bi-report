@@ -73,7 +73,7 @@ I created key measures to prepare for analysis, using DAX expressions:\
 - ProfitYTD = CALCULATE(\
     [TotalProfit],\
     DATESYTD('Date'[Date])\
-)\
+  )
 
 *Screenshot of Measures Table*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/596c86e7-a31c-43ee-b04f-4a6b2d5d71ea)
