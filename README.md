@@ -91,11 +91,17 @@ Ensure the data categories are correct for this, so I made sure the 'Region' dat
 
 ## Customer Detail Page
 I created the following visuals, whilst ensuring I followed a consistent format using the format tab for each visual:
-- Headline Card Visuals
-- Summary Chart
-- Line Chart
-- Top 20 Customers Table
-- Top Customer Cards
+- Headline Card Visuals\
+Use the 'card' visual with total customers and a new measure, revenue per customer.
+- Summary Chart\
+Use the 'donut' visual with Unique Customers in the values section and Country in the details section.
+- Line Chart\
+Date Hierarchy as an x value and Unique Customers as a y value.\
+Click on 'add further analysis to your visual' in the visualisation pane to include a Trend Line and Forecast.
+- Top 20 Customers Table\
+Include whichever information you want in the customer table, applying a Top20 filter.
+- Top Customer Cards\
+See below.
 - Date Slicer
 
 These were fairly easy to produce, with time mainly taken to ensure they were formatted in a presentable way. However, the 'Top Customer Cards' were initially tricky as I couldn't produce a TopN filter, as I used the 'Card' visual. To get around this, I created 3 tables and then applied the TopN filter by adding the 'Full Name' column to each visual filter.
