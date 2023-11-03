@@ -96,7 +96,7 @@ I created the following visuals, whilst ensuring I followed a consistent format 
 - Line Chart
 - Top 20 Customers Table
 - Top Customer Cards
-- Date Slicer
+- Date Slicer\
 These were fairly easy to produce, with time mainly taken to ensure they were formatted in a presentable way. However, the 'Top Customer Cards' were initially tricky as I couldn't produce a TopN filter, as I used the 'Card' visual. To get around this, I created 3 tables and then applied the TopN filter by adding the 'Full Name' column to each visual filter.
 
 *My finished customer detail page*
