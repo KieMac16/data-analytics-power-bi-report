@@ -2,7 +2,7 @@
 
 ## 1. Import and clean the data
 ## 2. Creating the data model
-
+## 3. Customer Detail Page
 
 ----------------------------------------
 
@@ -15,6 +15,8 @@ For each of the following, click on the 'get data' option to start the process. 
 - Import the Customers table by selecting get data, folder. This will load the files in your folder and combine them into a single table if you select 'combine and transform'. Ensure the zip file is unzipped.
 
 Ensure the data is clean by eliminating rows with null values (you can do this by filtering the null values out and the save & load the query), ensure all columns are named consistently (I have opted for a 'Customer Info' style), ensure all columns have the correct data type (you can click on the data type for each column heading), delete any unused columns and split columns if you think this would benefit your analysis.
+
+----------------------------------------
 
 ## Creating the data model
 
@@ -85,5 +87,19 @@ Ensure the data categories are correct for this, so I made sure the 'Region' dat
 *Screenshot of Geography Hierarchy*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/84a05821-1ffa-4ad1-80de-861987e5f4bc)
 
+----------------------------------------
+
+## Customer Detail Page
+I created the following visuals, whilst ensuring I followed a consistent format using the format tab for each visual:
+- Headline Card Visuals
+- Summary Chart
+- Line Chart
+- Top 20 Customers Table
+- Top Customer Cards
+- Date Slicer
+These were fairly easy to produce, with time mainly taken to ensure they were formatted in a presentable way. However, the 'Top Customer Cards' were initially tricky as I couldn't produce a TopN filter, as I used the 'Card' visual. To get around this, I created 3 tables and then applied the TopN filter by adding the 'Full Name' column to each visual filter.
+
+*My finished customer detail page*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/09208b57-fabc-4207-82d6-a6c56eb512a0)
 
 
