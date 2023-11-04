@@ -3,7 +3,8 @@
 ## 1. Import and clean the data
 ## 2. Creating the data model
 ## 3. Customer Detail Page
-## 4. Executive Summary
+## 4. Executive Summary Page
+## 5. Product Detail Page
 
 ----------------------------------------
 
@@ -112,7 +113,7 @@ These were fairly easy to produce, with time mainly taken to ensure they were fo
 
 ----------------------------------------
 
-## Executive Summary
+## Executive Summary Page
 
 I duplicated many of the visuals from the Customer Details page to create the following visuals for the Executive Page:
 
@@ -127,3 +128,25 @@ Previous Quarter Profit = CALCULATE([TotalProfit], PREVIOUSQUARTER('Date'[Date])
 
 *Screenshot of my executive summary*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/76f18abd-784f-436a-ac32-d831753461e6)
+
+## Product Detail Page
+
+Using a combination of my previous pages and new visuals, I created the following to show product details:
+
+- 3 gauge visuals that tracks revenue, profit and orders, creating new measures that looked at QTD and targets using DAX measures like:\
+Current Quarter Order = CALCULATE([Total Orders], DATESQTD('Date'[Date]))
+Quarterly Target Orders = 1.1 * [Current Quarter Order]
+- An area chart with the x-axis using my date hierarchy, the y-axis using total revenue and the legend using product category
+-  A top products table with relevant information and using a previous table made this a very quick exercise
+-  A scatter graph of quantity sold vs profit per iten
+-  A slicer toolber
+This was tricky in the sense that I needed to make sure the bookmarks, buttons and selections were in the correct order. First, I created the infrastructure by inserting rectangles and two vertical slicers (country and product category). Then, I ordered these at the top of the selection panel, whilst grouping them through this. I created two buttons that allows the user to open and close the slicer bar, so needed to create two bookmarks - one with the slicer bar open, and one with it hidden in the selection panel. Finally, I enabled actions in both of my buttons, assigning the filter button the 'slicer bar open' bookmark, and the back button the 'slicer bar closed' bookmark.
+
+*Screenshot of the Selection and Bookmark sidebars*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/eb55aff6-3d93-4b13-929f-b9fd41aa7880)
+
+*Screenshot of product details without the slicer bookmark*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/1340ac64-b376-42fb-bf7a-f6dca232ca1e)
+
+*Screenshot of product details with the slicer bookmark*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/69a60854-d0d1-4709-8c0f-c9a522473fe0)
