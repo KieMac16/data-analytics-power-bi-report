@@ -5,6 +5,7 @@
 ## 3. Customer Detail Page
 ## 4. Executive Summary Page
 ## 5. Product Detail Page
+## 6. Stores Map Page
 
 ----------------------------------------
 
@@ -129,6 +130,8 @@ Previous Quarter Profit = CALCULATE([TotalProfit], PREVIOUSQUARTER('Date'[Date])
 *Screenshot of my executive summary*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/76f18abd-784f-436a-ac32-d831753461e6)
 
+----------------------------------------
+
 ## Product Detail Page
 
 Using a combination of my previous pages and new visuals, I created the following to show product details:
@@ -150,3 +153,30 @@ This was tricky in the sense that I needed to make sure the bookmarks, buttons a
 
 *Screenshot of product details with the slicer bookmark*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/69a60854-d0d1-4709-8c0f-c9a522473fe0)
+
+----------------------------------------
+
+## Stores Map Page
+
+I added a Stores Map page, which lead to me creating a drillthrough and toolkit page to help navigation through the map visual:
+
+- Adding a map visual
+- Add a country tile slicer to the top of the page
+- Create a drillthrough page with the visuals that I need - the important note here is to add the country table to the drillthrough option on the drillthrough page which allows you to right-click on the map visual to drillthrough
+- Create a tooltip page with a Profit YTD gauge\
+You need to ensure this is enabled and scaled correctly.\
+To enable, go to File - Options and Settings - Options - Preview Features - Check 'Modern Visual Tooltips' and restart Power BI.\
+To ensure the Tooltip is scaled go to File - Options and Settings - Options - Report Settings - Tooltips Auto-Scale
+
+*The Stores Map page*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/0b8f190e-f830-421c-9392-99a9d605b46c)
+
+*The stores drillthrough option*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/c7b7157d-7557-4a90-b23d-e88620252417)
+
+*The stores drillthrough page*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/4652a9b4-7001-4c07-b092-7e620e558995)
+
+*Screenshot of a gauge visual being used as a tooltip*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/663456e3-c9d2-42b0-bf05-8d66b3ce6bfc)
+
