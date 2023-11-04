@@ -180,3 +180,13 @@ To ensure the Tooltip is scaled go to File - Options and Settings - Options - Re
 *Screenshot of a gauge visual being used as a tooltip*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/663456e3-c9d2-42b0-bf05-8d66b3ce6bfc)
 
+----------------------------------------
+
+## Cross-Filtering and Navigation
+
+Fix the cross filtering: Use the 'Edit Interactions' option from Format to allow some visuals to not be affected by the filtering of others. Simply click on a visual and a 'stop' sign appears on other visuals to allow you to switch off the cross-filtering function.
+
+Navigation: Click on Insert - Buttons - Blank and edit the visual using the format visual options in the visualisation pane. Under 'Style' you can add an icon and a fill, which changes the colour of the navigation button if you hover over it (state: on hover). To ensure the button actions as a navigation button click on the action dropdown and change type to page navigation, using the destination dropdown to choose the relevant page.
+
+*Screenshot of the completed navigation tab with alternate icons depending on hover*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/6f8df8b1-65a5-4bf7-9acf-25499234925d)
