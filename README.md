@@ -3,6 +3,7 @@
 ## 1. Import and clean the data
 ## 2. Creating the data model
 ## 3. Customer Detail Page
+## 4. Executive Summary
 
 ----------------------------------------
 
@@ -109,4 +110,20 @@ These were fairly easy to produce, with time mainly taken to ensure they were fo
 *My finished customer detail page*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/09208b57-fabc-4207-82d6-a6c56eb512a0)
 
+----------------------------------------
 
+## Executive Summary
+
+I duplicated many of the visuals from the Customer Details page to create the following visuals for the Executive Page:
+
+- Total Revenue, Total Orders and Total Profit card visuals
+- A Line Chart with Total Profit
+- Donut Charts for Revenue
+- A Bar Chart of Total Orders by Category
+- KPI Visuals
+
+To create KPI visuals I needed to create Previous Quarter measures. For example, for Previous Quarter Profit I used:\
+Previous Quarter Profit = CALCULATE([TotalProfit], PREVIOUSQUARTER('Date'[Date]))
+
+*Screenshot of my executive summary*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/76f18abd-784f-436a-ac32-d831753461e6)
