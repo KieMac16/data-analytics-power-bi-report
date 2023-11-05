@@ -49,7 +49,7 @@ StartofMonth = MONTH('Date'[Date])
 
 StartofMonthName = SWITCH('Date'[StartofMonth], 1, "Jan", 2, "Feb", 3, "Mar", 4, "Apr", 5, "May", 6, "Jun", 7, "Jul", 8, "Aug", 9, "Sep", 10, "Oct", 11, "Nov", 12, "Dec")
 
-- And finally I created a Date Hierarcy to allow me to drill down into data by date types - This is as simple as right clikcing on your first date type and selecting 'Create Hierarchy'. Then, in order, right click on the next date type and click 'Add to hierarchy', selecting your date hierarchy.
+- And finally I created a Date Hierarcy to allow me to drill down into data by date types - This is as simple as right clicking on your first date type and selecting 'Create Hierarchy'. Then, in order, right click on the next date type and click 'Add to hierarchy', selecting your Date Hierarchy.
 
 *Screenshot of Date Hierarchy*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/2fa66ce6-b745-475b-a0c4-476df7560330)
@@ -62,8 +62,8 @@ On the left of the screen you can see three views - Report, Table and Model. Cli
 
 ### *Create a Measure Table*
 The best approach to creating a measure table is by doing so in Model View with Power Query Editor so that the table appears in the Query Editor.
-To do this, click 'New Table' and name the table 'Measures Table'.
-After adding a new measure to the table you can delete the existing column when creating the table.
+To do this, click 'New Table' when in Power Query Editor and name the table 'Measures Table'.
+After adding a new measure to the table you can delete the existing column that was automatically added when creating the table.
 Now, ensure you have clicked on the measure table before you create any new measures - which ensures your new measure is stored in your measures table.
 
 ### *Create key measures*
@@ -86,7 +86,7 @@ I created key measures to prepare for analysis, using DAX expressions:\
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/596c86e7-a31c-43ee-b04f-4a6b2d5d71ea)
 
 ### *Create a Geography Hierarcy*
-As before with the date hierarchy, we can do the same with Geography.
+As before with the Date Hierarchy, we can do the same with Geography.
 Ensure the data categories are correct for this, so I made sure the 'Region' data category was changed to 'Continent', for example.
 
 *Screenshot of Geography Hierarchy*
@@ -97,9 +97,9 @@ Ensure the data categories are correct for this, so I made sure the 'Region' dat
 ## Customer Detail Page
 I created the following visuals, whilst ensuring I followed a consistent format using the format tab for each visual:
 - Headline Card Visuals\
-Use the 'card' visual with total customers and a new measure, revenue per customer.
+Use the 'card' visual with total customers and a new measure, Revenue per Customer.
 - Summary Chart\
-Use the 'donut' visual with Unique Customers in the values section and Country in the details section.
+Use the 'donut' visual with Unique Customers in the Values section and Country in the details section.
 - Line Chart\
 Date Hierarchy as an x value and Unique Customers as a y value.\
 Click on 'add further analysis to your visual' in the visualisation pane to include a Trend Line and Forecast.
@@ -121,12 +121,12 @@ These were fairly easy to produce, with time mainly taken to ensure they were fo
 I duplicated many of the visuals from the Customer Details page to create the following visuals for the Executive Page:
 
 - Total Revenue, Total Orders and Total Profit card visuals
-- A Line Chart with Total Profit
-- Donut Charts for Revenue
-- A Bar Chart of Total Orders by Category
+- A line chart with Total Profit
+- Donut charts for Revenue
+- A bar chart of Total Orders by Category
 - KPI Visuals
 
-To create KPI visuals I needed to create Previous Quarter measures. For example, for Previous Quarter Profit I used:\
+To create KPI Visuals I needed to create Previous Quarter measures. For example, for Previous Quarter Profit I used:\
 Previous Quarter Profit = CALCULATE([TotalProfit], PREVIOUSQUARTER('Date'[Date]))
 
 *Screenshot of my executive summary*
@@ -138,12 +138,12 @@ Previous Quarter Profit = CALCULATE([TotalProfit], PREVIOUSQUARTER('Date'[Date])
 
 Using a combination of my previous pages and new visuals, I created the following to show product details:
 
-- 3 gauge visuals that tracks revenue, profit and orders, creating new measures that looked at QTD and targets using DAX measures like:\
-Current Quarter Order = CALCULATE([Total Orders], DATESQTD('Date'[Date]))\
+- 3 gauge visuals that tracks Revenue, Profit and Orders, creating new measures that looked at QTD and targets using DAX measures like:\
+Current Quarter Orders = CALCULATE([Total Orders], DATESQTD('Date'[Date]))\
 Quarterly Target Orders = 1.1 * [Current Quarter Order]
-- An area chart with the x-axis using my date hierarchy, the y-axis using total revenue and the legend using product category
--  A top products table with relevant information and using a previous table made this a very quick exercise
--  A scatter graph of quantity sold vs profit per iten
+- An area chart with the x-axis using my Date Hierarchy, the y-axis using Total Revenue and the legend using Product Category
+-  A Top Products table with relevant information and using a previous table made this a very quick exercise
+-  A scatter graph of Quantity Sold vs Profit per Item
 -  A slicer toolber\
 This was tricky in the sense that I needed to make sure the bookmarks, buttons and selections were in the correct order. First, I created the infrastructure by inserting rectangles and two vertical slicers (country and product category). Then, I ordered these at the top of the selection panel, whilst grouping them through this. I created two buttons that allows the user to open and close the slicer bar, so needed to create two bookmarks - one with the slicer bar open, and one with it hidden in the selection panel. Finally, I enabled actions in both of my buttons, assigning the filter button the 'slicer bar open' bookmark, and the back button the 'slicer bar closed' bookmark.
 
@@ -164,11 +164,11 @@ I added a Stores Map page, which lead to me creating a drillthrough and toolkit 
 
 - Adding a map visual
 - Add a country tile slicer to the top of the page
-- Create a drillthrough page with the visuals that I need - the important note here is to add the country table to the drillthrough option on the drillthrough page which allows you to right-click on the map visual to drillthrough
+- Create a drillthrough page with the visuals that I need - the important note here is to add the Country column to the drillthrough option on the drillthrough page which allows you to right-click on the map visual to drillthrough
 - Create a tooltip page with a Profit YTD gauge\
-You need to ensure this is enabled and scaled correctly.\
+You need to ensure this tooltip option is enabled and scaled correctly.\
 To enable, go to File - Options and Settings - Options - Preview Features - Check 'Modern Visual Tooltips' and restart Power BI.\
-To ensure the Tooltip is scaled go to File - Options and Settings - Options - Report Settings - Tooltips Auto-Scale
+To ensure the Tooltip is scaled, go to File - Options and Settings - Options - Report Settings - Tooltips Auto-Scale.
 
 *The Stores Map page*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/0b8f190e-f830-421c-9392-99a9d605b46c)
@@ -188,7 +188,7 @@ To ensure the Tooltip is scaled go to File - Options and Settings - Options - Re
 
 Fix the cross filtering: Use the 'Edit Interactions' option from Format to allow some visuals to not be affected by the filtering of others. Simply click on a visual and a 'stop' sign appears on other visuals to allow you to switch off the cross-filtering function.
 
-Navigation: Click on Insert - Buttons - Blank and edit the visual using the format visual options in the visualisation pane. Under 'Style' you can add an icon and a fill, which changes the colour of the navigation button if you hover over it (state: on hover). To ensure the button actions as a navigation button click on the action dropdown and change type to page navigation, using the destination dropdown to choose the relevant page.
+Navigation: Click on Insert - Buttons - Blank to insert a blank button to allow you to edit the visual using the format visual options in the visualisation pane. Under 'Style' you can add an icon and a fill, which changes the colour of the navigation button if you hover over it (state: on hover). To ensure the button actions as a navigation button click on the action dropdown and change type to page navigation, using the destination dropdown to choose the relevant page.
 
 *Screenshot of the completed navigation tab with alternate icons depending on hover*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/6f8df8b1-65a5-4bf7-9acf-25499234925d)
@@ -218,5 +218,5 @@ I done this using the SQLTools extension which you can get in the extensions tab
 Q1. How many staff are there in UK stores?\
 Q2. In 2022, which month had the highest revenue?\
 Q3. In 2022, which German store had the highest revenue?\
-Q4. Create a table that has store types, total sales, percentage of total sales and order count.
+Q4. Create a table that has store types, total sales, percentage of total sales and order count.\
 Q5. Which product category generated the most profit for "Wiltshire, UK", in 2021?
