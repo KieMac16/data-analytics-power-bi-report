@@ -1,18 +1,18 @@
 # Data Analytics Power BI Report
 
-## 1. Import and clean the data
-## 2. Creating the data model
-## 3. Customer Detail Page
-## 4. Executive Summary Page
-## 5. Product Detail Page
-## 6. Stores Map Page
-## 7. Cross-filtering and Navigation
-## 8. SQL Queries
-## 9. License
+## 1. Import and clean the data (#S1)
+## 2. Creating the data model (#S2)
+## 3. Customer Detail Page (#S3)
+## 4. Executive Summary Page (#S4)
+## 5. Product Detail Page (#S5)
+## 6. Stores Map Page (#S6)
+## 7. Cross-filtering and Navigation (#S7)
+## 8. SQL Queries (#S8)
+## 9. License (#S9)
 
 ----------------------------------------
 
-## Import and clean the data
+## Import and clean the data <a name="S1"></a>
 
 For each of the following, click on the 'get data' option to start the process. Then, choose the appropriate option depending on the data source:
 - Import the Orders table by connecting to the Azure SQL database using the database credentials option. If you are having issues connecting to this database ensure you don't select the orders_db section, and you don't need to include this in the optional database entry.
@@ -24,7 +24,7 @@ Ensure the data is clean by eliminating rows with null values (you can do this b
 
 ----------------------------------------
 
-## Creating the data model
+## Creating the data model <a name="S2"></a>
 
 ### *Date Table*
 - To create a date table, I used the following DAX expression when creating a new table in Power Query Editor:
@@ -95,7 +95,7 @@ Ensure the data categories are correct for this, so I made sure the 'Region' dat
 
 ----------------------------------------
 
-## Customer Detail Page
+## Customer Detail Page <a name="S3"></a>
 I created the following visuals, whilst ensuring I followed a consistent format using the format tab for each visual:
 - Headline Card Visuals\
 Use the 'card' visual with total customers and a new measure, Revenue per Customer.
@@ -117,7 +117,7 @@ These were fairly easy to produce, with time mainly taken to ensure they were fo
 
 ----------------------------------------
 
-## Executive Summary Page
+## Executive Summary Page <a name="S4"></a>
 
 I duplicated many of the visuals from the Customer Details page to create the following visuals for the Executive Page:
 
@@ -135,7 +135,7 @@ Previous Quarter Profit = CALCULATE([TotalProfit], PREVIOUSQUARTER('Date'[Date])
 
 ----------------------------------------
 
-## Product Detail Page
+## Product Detail Page <a name="S5"></a>
 
 Using a combination of my previous pages and new visuals, I created the following to show product details:
 
@@ -159,7 +159,7 @@ This was tricky in the sense that I needed to make sure the bookmarks, buttons a
 
 ----------------------------------------
 
-## Stores Map Page
+## Stores Map Page <a name="S6"></a>
 
 I added a Stores Map page, which lead to me creating a drillthrough and toolkit page to help navigation through the map visual:
 
@@ -185,7 +185,7 @@ To ensure the Tooltip is scaled, go to File - Options and Settings - Options - R
 
 ----------------------------------------
 
-## Cross-Filtering and Navigation
+## Cross-Filtering and Navigation <a name="S7"></a>
 
 Fix the cross filtering: Use the 'Edit Interactions' option from Format to allow some visuals to not be affected by the filtering of others. Simply click on a visual and a 'stop' sign appears on other visuals to allow you to switch off the cross-filtering function.
 
@@ -196,7 +196,7 @@ Navigation: Click on Insert - Buttons - Blank to insert a blank button to allow 
 
 ----------------------------------------
 
-## SQL Queries
+## SQL Queries <a name="S8"></a>
 
 I finished this project by creating metrics for users outside the company using SQL. To do this, I:
 
@@ -224,6 +224,6 @@ Q5. Which product category generated the most profit for "Wiltshire, UK", in 202
 
 ----------------------------------------
 
-## License
+## License <a name="S9"></a>
 
 MIT
