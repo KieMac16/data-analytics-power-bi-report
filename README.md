@@ -8,6 +8,7 @@
 ## 6. Stores Map Page
 ## 7. Cross-filtering and Navigation
 ## 8. SQL Queries
+## 9. License
 
 ----------------------------------------
 
@@ -220,3 +221,9 @@ Q2. In 2022, which month had the highest revenue?\
 Q3. In 2022, which German store had the highest revenue?\
 Q4. Create a table that has store types, total sales, percentage of total sales and order count.\
 Q5. Which product category generated the most profit for "Wiltshire, UK", in 2021?
+
+----------------------------------------
+
+## License
+
+MIT
