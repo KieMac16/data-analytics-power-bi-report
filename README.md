@@ -1,14 +1,14 @@
 # Data Analytics Power BI Report
 
-## 1. [Import and clean the data] (#S1)
-## 2. [Creating the data model] (#S2)
-## 3. [Customer Detail Page] (#S3)
-## 4. [Executive Summary Page] (#S4)
-## 5. [Product Detail Page] (#S5)
+## 1. [Import and clean the data](#S1)
+## 2. [Creating the data model](#S2)
+## 3. [Customer Detail Page](#S3)
+## 4. [Executive Summary Page](#S4)
+## 5. [Product Detail Page](#S5)
 ## 6. [Stores Map Page] (#S6)
-## 7. [Cross-filtering and Navigation] (#S7)
-## 8. [SQL Queries] (#S8)
-## 9. [License] (#S9)
+## 7. [Cross-filtering and Navigation](#S7)
+## 8. [SQL Queries](#S8)
+## 9. [License](#S9)
 
 ----------------------------------------
 
