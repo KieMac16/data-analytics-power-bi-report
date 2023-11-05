@@ -6,6 +6,8 @@
 ## 4. Executive Summary Page
 ## 5. Product Detail Page
 ## 6. Stores Map Page
+## 7. Cross-filtering and Navigation
+## 8. SQL Queries
 
 ----------------------------------------
 
@@ -191,9 +193,30 @@ Navigation: Click on Insert - Buttons - Blank and edit the visual using the form
 *Screenshot of the completed navigation tab with alternate icons depending on hover*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/6f8df8b1-65a5-4bf7-9acf-25499234925d)
 
+----------------------------------------
+
 ## SQL Queries
 
+I finished this project by creating metrics for users outside the company using SQL. To do this, I:
+
+- Connected to the SQL Server through VSCode\
+Connection Name: OrdersDB\
+Connect using: Server and Port\
+Server address: powerbi-data-analytics-server.postgres.database.azure.com\
+Port: 5432\
+Database: orders-db\
+Username: ****\
+Password: Ask on connect\
+I done this using the SQLTools extension which you can get in the extensions tab, and I used the PostgreSQL connection.
+
+- I printed the list of tables and columns within the tables, to help me with my queries, shown in the following screenshot:
 
 *Screenshot of the SQL code used to get table and column lists*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/127ca4fc-b808-4fac-8b59-9afb248e7f47)
 
+- I queried the database to answer the following 5 questions, with all queries (.sql) and results (.csv) uploaded to this repo:\
+Q1. How many staff are there in UK stores?\
+Q2. In 2022, which month had the highest revenue?\
+Q3. In 2022, which German store had the highest revenue?\
+Q4. Create a table that has store types, total sales, percentage of total sales and order count.
+Q5. Which product category generated the most profit for "Wiltshire, UK", in 2021?
