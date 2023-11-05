@@ -1,0 +1,6 @@
+"table_name"
+"dim_customer"
+"dim_date"
+"dim_product"
+"dim_store"
+"orders"
