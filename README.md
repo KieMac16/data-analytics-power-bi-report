@@ -190,3 +190,10 @@ Navigation: Click on Insert - Buttons - Blank and edit the visual using the form
 
 *Screenshot of the completed navigation tab with alternate icons depending on hover*
 ![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/6f8df8b1-65a5-4bf7-9acf-25499234925d)
+
+## SQL Queries
+
+
+*Screenshot of the SQL code used to get table and column lists*
+![image](https://github.com/KieMac16/data-analytics-power-bi-report/assets/145379671/127ca4fc-b808-4fac-8b59-9afb248e7f47)
+
