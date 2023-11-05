@@ -5,7 +5,7 @@
 ## 3. [Customer Detail Page](#S3)
 ## 4. [Executive Summary Page](#S4)
 ## 5. [Product Detail Page](#S5)
-## 6. [Stores Map Page] (#S6)
+## 6. [Stores Map Page](#S6)
 ## 7. [Cross-filtering and Navigation](#S7)
 ## 8. [SQL Queries](#S8)
 ## 9. [License](#S9)
